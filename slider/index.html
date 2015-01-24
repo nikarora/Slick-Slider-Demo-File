@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/slick.css">
+	<style type="text/css">
+		*{margin:0; padding: 0;}
+		.container{margin:0 auto; width:1000px;}
+		#our-products{background: #ccc; padding:20px 0; width: 100%;}
+		#our-products .product-slider{padding:40px 80px;}
+		#our-products .product-slider .product-slider-test .item{margin:10px;}
+		#our-products .product-slider .product-slider-test .product-img{background:#404040; color:#fff; text-align:center; height: 250px; width:auto;}
+		#our-products .product-slider .product-slider-test .product-desc{text-align: center;}
+		.slick-prev, .slick-next{background: #404040; color:#fff; padding:5px; line-height: 25px;}
+		.slick-prev:hover, .slick-next:hover{background: #303030;}
+
+		@media only screen and (max-width: 767px){
+			.container{padding:0 10px; width:auto;}
+			#our-products .product-slider{padding:20px;}
+		}
+		@media only screen and (min-width:768px) and (max-width: 991px){
+			.container{padding:0 10px; width:750px;}
+			#our-products .product-slider{padding:20px;}
+		}
+		@media only screen and (min-width:992px) and (max-width: 1199px){
+			.container{padding:0 10px; width:1000px;}
+			#our-products .product-slider{padding:20px;}
+		}
+	</style>
+</head>
+<body>
+	<section id="our-products">
+		<div class="container">
+			<div class="product-slider">
+				<div class="product-slider-test">
+					<div class="item">
+						<div class="product-img">Product 1</div>
+						<div class="product-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="product-img">Product 2</div>
+						<div class="product-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="product-img">Product 3</div>
+						<div class="product-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="product-img">Product 4</div>
+						<div class="product-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js" type="text/javascript"></script>
+	<script>
+	$('.product-slider-test').slick({
+			autoplay:true,
+			dots: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 2,
+			slidesToScroll: 2,
+			responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+			    slidesToShow: 2,
+			    slidesToScroll: 2,
+			    infinite: true,
+			    dots: true
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+			    slidesToShow: 1,
+			    slidesToScroll: 1
+			  }
+			}
+			]
+		});
+	</script>
+</body>
+</html>
